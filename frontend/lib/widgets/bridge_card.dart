@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bridge_management_flutter/lib/models/bridge.dart';
+import '../models/bridge.dart';
 
 class BridgeCard extends StatelessWidget {
   final Bridge bridge;
@@ -13,8 +13,8 @@ class BridgeCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       child: ListTile(
         title: Text(bridge.name),
-        subtitle: Text('Condition: ${bridge.condition}'),
-        trailing: const Icon(Icons.arrow_forward_ios),
+        subtitle: Text('위치: ${bridge.location}'),
+        trailing: Text('상태: ${bridge.status}'),
         onTap: onTap,
       ),
     );
